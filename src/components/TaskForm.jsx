@@ -6,10 +6,13 @@ const TaskForm = ({ addTask }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (task.title && task.category && task.priority) {
-      addTask(task);
-      setTask({ title: '', category: '', priority: '' });
+    if (!task.title || !task.category || !task.priority) {
+      setError('Por favor, preencha todos os campos.');
+      return;
     }
+    setError('');
+    addTask(task);
+    setTask({ title: '', category: '', priority: '' });
   };
 
   return (
