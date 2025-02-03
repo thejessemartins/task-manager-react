@@ -28,7 +28,7 @@ O **Task Manager** é uma aplicação web simples para gerenciar suas tarefas di
 
 1. **Clone o Repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/task-manager.git
+   git clone https://github.com/thejessemartins/task-manager.git
    cd task-manager
    ```
 
@@ -87,7 +87,7 @@ Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE.md
 
 ## Autor
 
-- **João Silva** - [GitHub](https://github.com/seu-usuario) | [LinkedIn](https://linkedin.com/in/seu-perfil)
+- **João Silva** - [GitHub](https://github.com/thejessemartins) | [LinkedIn](https://www.linkedin.com/in/jess%C3%A9-martins-boeira-8b98381b3/)
 
 ---
 
