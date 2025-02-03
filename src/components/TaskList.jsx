@@ -2,7 +2,7 @@
 import React from 'react';
 import TaskItem from './TaskItem';
 
-const TaskList = ({ tasks, onDelete, onComplete }) => {
+const TaskList = ({ tasks, onDelete, onComplete, onEdit }) => {
   return (
     <div>
       {tasks.length > 0 ? (
@@ -12,10 +12,11 @@ const TaskList = ({ tasks, onDelete, onComplete }) => {
             task={task}
             onDelete={onDelete}
             onComplete={onComplete}
+            onEdit={onEdit}
           />
         ))
       ) : (
-        <p>Nenhuma tarefa encontrada.</p>
+        <p className="text-center text-muted">Nenhuma tarefa encontrada.</p>
       )}
     </div>
   );
