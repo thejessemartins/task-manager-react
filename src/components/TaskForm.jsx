@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 const TaskForm = ({ addTask }) => {
   const [task, setTask] = useState({ title: '', category: '', priority: '' });
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,6 +18,7 @@ const TaskForm = ({ addTask }) => {
 
   return (
     <form onSubmit={handleSubmit} className="mb-4 shadow p-4 rounded">
+      {error && <div className="alert alert-danger">{error}</div>}
       <div className="mb-3">
         <label className="form-label">Título da Tarefa</label>
         <input
@@ -28,6 +30,7 @@ const TaskForm = ({ addTask }) => {
         />
       </div>
       <div className="mb-3">
+        <label className="form-label">Categoria</label>
         <select
           value={task.category}
           onChange={(e) => setTask({ ...task, category: e.target.value })}
@@ -40,6 +43,7 @@ const TaskForm = ({ addTask }) => {
         </select>
       </div>
       <div className="mb-3">
+        <label className="form-label">Prioridade</label>
         <select
           value={task.priority}
           onChange={(e) => setTask({ ...task, priority: e.target.value })}
@@ -47,11 +51,11 @@ const TaskForm = ({ addTask }) => {
         >
           <option value="">Selecione a prioridade</option>
           <option value="Alta">Alta</option>
-          <option value="Média">Média</option>
+          <option value="Media">Média</option>
           <option value="Baixa">Baixa</option>
         </select>
       </div>
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn btn-primary w-100">
         Adicionar Tarefa
       </button>
     </form>
