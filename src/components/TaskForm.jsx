@@ -13,8 +13,9 @@ const TaskForm = ({ addTask }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4">
+    <form onSubmit={handleSubmit} className="mb-4 shadow p-4 rounded">
       <div className="mb-3">
+        <label className="form-label">Título da Tarefa</label>
         <input
           type="text"
           placeholder="Título da tarefa"
